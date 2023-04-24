@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .outer{
+            width: 400px;
+            height: 300px;
+            border-color: aqua;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+            cursor: pointer;
+        }
+        .mask{
+            width: 400px;
+            height: 300px;
+            background-color: black;
+            color: white;
+            position: absolute;
+            top: 0;
+            left: 0;
+            text-align: center;
+            line-height: 300px;
+            font-size: 100px;
+            opacity: 0;
+            transition: 1s linear all;
+        }
+        img{
+            width: 400px;
+            height: 300px;
+            transition: 1s linear all;
+        }
+        .outer:hover .mask{
+            opacity: 0.5;
+        }
+        .outer:hover img{
+            transform: scale(1.6) rotate(15deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="outer">
+        <img src="./img/image1" alt="">
+        <div class="mask">上海</div>
+    </div>
+</body>
+</html>
